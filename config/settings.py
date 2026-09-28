@@ -130,3 +130,8 @@ DEBUG = os.environ.get("DJANGO_DEBUG", "0") == "1"
 ALLOWED_HOSTS = os.environ.get("DJANGO_ALLOWED_HOSTS", "").split(",")
 DATABASES = {"default": dj_database_url.config(env="DATABASE_URL")}
 STATIC_ROOT = BASE_DIR / "staticfiles"
+
+INSTALLED_APPS += ["accounts"]
+LOGIN_URL = "login"
+LOGIN_REDIRECT_URL = "dashboard"
+LOGOUT_REDIRECT_URL = "login"

@@ -1,0 +1,9 @@
+{% extends "accounts/base.html" %}
+{% block title %}Dashboard{% endblock %}
+{% block content %}
+<h2>Welcome, {{ user.username }} 👋</h2>
+<p>You're logged in.</p>
+<form method="post" action="{% url 'logout' %}">{% csrf_token %}
+  <button type="submit">Sign out</button>
+</form>
+{% endblock %}

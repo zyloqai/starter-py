@@ -1,0 +1,18 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>{% block title %}App{% endblock %}</title>
+  <style>
+    body { font-family: system-ui, sans-serif; background:#f6f6f7; margin:0; }
+    .box { max-width:380px; margin:10vh auto; background:#fff; padding:28px; border-radius:12px; box-shadow:0 2px 10px #0001; }
+    input { width:100%; padding:10px; margin:6px 0 12px; border:1px solid #ccc; border-radius:8px; box-sizing:border-box; }
+    button { width:100%; padding:10px; background:#111; color:#fff; border:0; border-radius:8px; cursor:pointer; }
+    .err, .errorlist { color:#c00; font-size:14px; }
+    .helptext, ul { font-size:12px; color:#666; }
+    a { color:#111; }
+  </style>
+</head>
+<body><div class="box">{% block content %}{% endblock %}</div></body>
+</html>
